@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>check</title>
+    <script>
+        function check(){
+            var name=document.getElementById("name").value;
+            var passwd=document.getElementById("passwd").value;
+            if(name.lenght >= 8 && name !="" && passwd.lenght >= 8 && passwd!=""){
+                alert('提交成功');
+            }
+            else{
+                alert('格式错误，提交失败');
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        姓名：<input type="text" size="15" id="name"><br><br>
+        密码：<input type="password" size="15" id="passwd"><br><br>
+        性别：<input type="radio" name="sex" value="male">男
+        <input type="radio" name="sex" value="female">女<br><br>
+        血型：<input type="radio" name="bloods" value="o">O
+        <input type="radio" name="bloods" value="a">A
+        <input type="radio" name="bloods" value="b">B
+        <input type="radio" name="bloods" value="ab">AB<br><br>
+        性格：<input type="checkbox" name="personal" value="hot">热情大方
+        <input type="checkbox" name="personal" value="nomal">温柔体贴
+        <input type="checkbox" name="personal" value="more">多情善感<br><br>
+        文件：<input type="file" accept="text"><br><br>
+        简介：<input type="text"><br><br>
+        城市：<select>
+            <option value="Beijing">北京市</option>
+            <option value="Chengdu">成都市</option>
+        </select><br><br>
+        <input type="button" value="提交" onclick="check()">
+        <input type="button" value="重置">
+    </form>
+</body>
+</html>
