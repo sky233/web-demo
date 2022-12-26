@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zhuce</title>
+    <style>
+        .big {
+            position: relative;
+            left: 650px;
+            top: 250px;
+            background-color: aqua;
+            width: 350px;
+            height: 300px;
+            text-align: center;
+        }
+        .inside {
+            position: relative;
+            top: 40px;
+        }
+        
+    </style>
+    <script>
+        function check(){
+            var name=document.getElementById("name").value;
+            var pass1=document.getElementById("pass1").value;
+            var pass2=document.getElementById("pass2").value;
+            if(name != '' && pass1.length >= 6 && pass1===pass2)
+            {
+                alert('注册成功！')
+            }
+            else
+            {
+                alert('格式错误')
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="big">
+        <div class="inside">
+            <h2 class="h">注册</h2>
+            用户名:<input type="text" class="name"><br><br>
+            密码：<input type="password" class="pass1"><br><br>
+            再次输入密码：<input type="password" class="pass2"><br><br>
+            <input type="button" value="提交" class="btn" onclick="check()">
+        </div>
+    </div>
+</body>
+
+</html>
